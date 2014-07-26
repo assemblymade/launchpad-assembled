@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- '0.11'
+- '0.10'
+- '0.8'
+- '0.6'
+deploy:
+  provider: heroku
+  app: lunchpad-assembled
+  api_key:
+    secure: "Y1+blJNaf8KgXU97rOCKebzOqopREzlrXBfKFvPEt4Y4QY4ooUo6u6v7Hr3CSyfiuYaHFjEYYmunAil3vf8+hZAj5LWheNBTdqhZJiEBmd6zJnBXx6vs9UFWqmuIWgyzZnUtswXSeIjuQ7r6zDGjG5ackY8z7JFWggdUcb1PLRw="
+  strategy: git
+before_deploy:
+- git fetch --unshallow
